@@ -1,0 +1,83 @@
+* {
+  transition: all 0.5s;
+}
+body {
+  background-image: linear-gradient(to right, #7f53ac 0, #657ced 100%);
+  background-repeat: no-repeat;
+}
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.interior {
+  .btn {
+    background-image: linear-gradient(to right, #8d6ab0 0, #657ced 100%);
+    padding: 0.7em 1.5em;
+    border-radius: 1em;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+    color: #fff;
+  }
+  .btn:hover {
+    background-image: linear-gradient(to right, #657ced 0, #8d6ab0 100%);
+  }
+}
+.modal-window {
+  position: fixed;
+  background-color: rgba(150, 97, 247, 0.25);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  color: #fff;
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  & > div {
+    width: 400px;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    padding: 2em;
+    background-image: linear-gradient(to right, #7f53ac 0, #8a9aee 100%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+  }
+  h1 {
+    font-size: 150%;
+  }
+  .modal-close {
+    color: rgb(208, 208, 208);
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      color: rgb(255, 255, 255);
+    }
+  }
+  .myName {
+    font-weight: 700;
+  }
+  .git-icon {
+    display: flex;
+    justify-content: center;
+  }
+  .tap {
+    text-align: center;
+  }
+}
